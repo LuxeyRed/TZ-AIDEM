@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Гросс маркет</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="#">
+    </head>
+    <body>
+        <header class="form-header"> 
+            <div class="page-header container">
+                <div class="logo">
+                    <img src="img/icon.svg" alt="">
+                    <span class="logo-text">гросс маркет</span>
+                </div>
+                <button class="close-btn" onclick="window.location.href='index.html';"></button>
+
+            </div>
+        </header>
+        <main>
+            <div class="container job-form-container">
+                <h1 class="job-form-title">Работа твоей мечты</h1>
+                <div class="form-section">
+                    <form class="job-form" id="job-form" action="thankYou.html" method="GET">
+                        <div class="input-section">
+                            <label for="job-select" class="form-label">
+                                Вакансия *<img src="img/check.png" alt="" class="check">
+                            </label>
+                            <select name="job-select" id="job-select" class="form-input job-select">
+                                <option value="">Выберите вакансию</option>
+                                <option value="товаровед">товаровед</option>
+                                <option value="водитель">водитель</option>
+                                <option value="пекарь">пекарь</option>
+                                <option value="кассир">кассир</option>
+                                <option value="продавец">продавец</option>
+                                <option value="повар">повар</option>
+                                <option value="приёмщик">приёмщик</option>
+                            </select>
+                            <div class="error-msg"></div>
+                        </div>
+                        <div class="input-section">
+                            <label for="full-name" class="form-label">
+                                ФИО *<img src="img/check.png" alt="" class="check">
+                            </label>
+                            <input name="full-name" id="full-name" type="text" class="form-input">
+                            <div class="error-msg"></div>
+                        </div>
+                        <div class="pers-section">
+                            <div class="input-section ">
+                                <label for="date-of-birth" class="form-label">
+                                    Дата рождения *<img src="img/check.png" alt="" class="check">
+                                </label>
+                                <input name="date-of-birth" id="date-of-birth" placeholder="28.07.2002" type="text" class="form-input">
+                                <div class="error-msg"></div>
+                            </div>
+                            <div class="input-section">
+                                <label for="gender" class="form-label" id="gender-label">
+                                    Пол<img src="img/check.png" alt="" class="check">
+                                </label>
+                                <div class="gender">
+                                    <div class="form-radio">
+                                        <input id="radio-1" type="radio" name="gender">
+                                        <label for="radio-1" class="form-label">мужской</label>
+                                    </div>
+                                    <div class="form-radio">
+                                        <input id="radio-2" type="radio" name="gender">
+                                        <label for="radio-2" class="form-label">женский</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pers-section">
+                            <div class="input-section">
+                                <label for="phone" class="form-label">
+                                    Контактый телефон *<img src="img/check.png" alt="" class="check">
+                                </label>
+                                <input name="phone" id="phone" type="tel" class="form-input phone-input" placeholder="+7 (">
+                                <div class="error-msg"></div>
+                            </div>
+                            <div class="input-section">
+                                <label for="email" class="form-label">
+                                    Электронная почта<img src="img/check.png" alt="" class="check">
+                                </label>
+                                <input name="el-mail" id="el-mail" type="email" class="form-input" placeholder="example@mail.com">
+                                <div class="error-msg"></div>
+                            </div>
+                        </div>
+                        <div class="input-section">
+                            <label for="file-input" class="form-label" id="file-label">
+                                Резюме<img src="img/check.png" alt="" class="check">
+                            </label>
+                            <span id="drop-area" class="form-input drop-area"></span>
+                            <div id="file-input-btn" class="form-input file-input-btn">
+                                <input name="file-input" id="file-input" type="file">
+                                <img id="file-icon" src="img/inputIcons/file.svg" alt="">
+                                <label for="file-icon" id="file-text">выберете или перетащите файл</label>
+                            </div>
+                        </div>
+                        <div class="captcha">
+                            <div class="captcha-section">
+                                <div class="input-section captcha-block">
+                                    <label label for="captcha-check" class="form-label">Капча</label>
+                                    <div class="form-input captcha-form">
+                                        <input name="captcha-check" id="captcha-check" type="checkbox" value="captcha">
+                                        <label for="captcha-check"></label>
+                                        <span>я не робот</span>
+                                        <img src="img/captcha.png" alt="">
+                                    </div>
+                                </div>
+                                <p class="required-text">* поля для обязательного заполнения</p>
+                            </div>
+                            <div class="approval-section">
+                                <input name="approval-check" id="approval-check" type="checkbox" value="approval">
+                                <label for="approval-check"></label>
+                                <p class="approval-text">я подтверждаю согласие на обработку персональных данных и принимаю 
+                                условия рассмотрения обращений *</p>
+                            </div>
+                        </div>    
+                        <button id="send-btn" class="form-input send-btn" type="submit" disabled>отправить</button>
+                    </form>
+                    <div class="super-goal">
+                        <h2 class="super-goal-title">Наша суперцель</h2>
+                        <p>— стать любимым магазином для каждой российской семьи.  </p>
+                        <p>Сотни тысяч наших сотрудников ежедневно работают над её достижением.</p>
+                        <p>Мы уверены, что в ближайшие годы достигнем этого и будет здорово, если вместе с тобой.</p>
+                        <a href="tel:+79264331416" class="super-goal-phone">+7 (926) 433-14-16</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="logo-share-section">
+                    <div class="logo">
+                        <img src="img/icon.svg" alt="">
+                        <span class="logo-text">гросс маркет</span>
+                    </div> 
+                    <span class="logo-text share-text">поделиться</span>
+                    <div class="share-link">
+                        <a href="">
+                            <img src="img/facebook.svg" alt="" >
+                        </a>
+                        <a href="">
+                            <img src="img/vk.svg" alt="" >
+                        </a>
+                    </div>
+                </div>
+                <div class="copyright-data">
+                    <span>&copy; Гросс маркет 2020</span>
+                    <a href="" id="open-popup">Политика обработки персональных данных</a>
+                </div>
+            </div>
+        </footer>
+
+        <div class="pers-data-popup" id="pers-data-popup">
+            <div class="popup-conteiner">
+               <div class="pers-data">
+                   <div id="popup-header">
+                       <h1 class="pers-data-title" id="pers-data-title">Обработка данных</h1>
+                       <button class="close-btn close-btn-top" id="close-btn"></button>
+                   </div>
+                   <section>
+                       <h2 class="pers-data-subtitle">Что регулирует настоящая политика конфиденциальности</h2>
+                       <p class="pers-data-text">Настоящая политика конфиденциальности (далее — Политика) действует в отношении 
+                           всей информации, включая персональные данные в понимании применимого законодательства (далее — 
+                           «Персональная информация»), которую ООО «Гросс маркет» и/или его аффилированные лица, в том числе 
+                           входящие в одну группу с ООО «Гросс маркет» (далее — «Гросс маркет»), могут получить о Вас в процессе 
+                           использования Вами любых сайтов, программ, продуктов и/или сервисов Гросс маркет (далее вместе  
+                           «Сервисы»), информацию о которых Гросс маркет может также получать Персональную информацию от 
+                           своих партнеров (далее — «Партнеры»), сайты, программы, продукты или сервисы которых Вы используете 
+                           (например, от рекламодателей Гросс маркет или службами такси). В таких случаях передача Персональной 
+                           информации возможна только в случаях, установленных применимым законодательством, и осуществляется на 
+                           основании специальных договоров между Гросс маркет и каждым из Партнеров.
+                       </p>
+                       <p class="pers-data-text pers-data-text-grey">Пожалуйста, обратите внимание, что использование любого из Сайтов и/или 
+                           Сервисов может регулироваться дополнительными условиями, которые могут вносить в настоящую Политику изменения 
+                           и/или дополнения, и/или иметь специальные условия в отношении персональной информации, размещенные в соответствующих 
+                           разделах документов для таких Сайтов /или Сервисов.
+                       </p>
+                   </section>
+                   <section>
+                       <h2 class="pers-data-subtitle">Кто обрабатывает информацию</h2>
+                       <p class="pers-data-text">Для обеспечения использования Вами Сайтов и Сервисов Ваша Персональная информация собирается и 
+                           используется Яндексом, в том числе включая общество с ограниченной ответственностью «Гросс маркет», 
+                           юридическое лицо, созданное по законодательству Российской Федерации и зарегистрированное по адресу: 
+                           123351, Россия, Москва, ул. Гроссова, д. 12 (ООО «Гросс маркет»), или его аффилированным лицом, 
+                           предоставляющим соответствующий Сервис в иных юрисдикциях. С информацией о том, какое лицо 
+                           предоставляет тот или иной Сервис, Вы можете ознакомиться в условиях использования соответствующего 
+                           Сервиса.
+                       </p> 
+                   </section>
+                   <section>
+                       <h2 class="pers-data-subtitle">Какова цель данной Политики</h2>
+                       <p class="pers-data-text">Защита Вашей Персональной информации и Вашей конфиденциальности чрезвычайно важны для Гросс маркета. 
+                           Поэтому при использовании Вами Сайтов и Сервисов Гросс маркет защищает и обрабатывает Вашу Персональную информацию 
+                           в строгом соответствии с применимым законодательством.
+                       </p>
+                   </section>
+                   <section>
+                       <h2 class="pers-data-subtitle">Какую Персональную информацию о Вас собирает Гросс маркет</h2>
+                       <p class="pers-data-text">Для обеспечения использования Вами Сайтов и Сервисов Ваша Персональная информация собирается и 
+                           используется Яндексом, в том числе включая общество с ограниченной ответственностью «Гросс маркет», юридическое лицо, 
+                           созданное по законодательству Российской Федерации и зарегистрированное по адресу: 123351, Россия, Москва, ул. Гроссова, 
+                           д. 12 (ООО «Гросс маркет»), или его аффилированным лицом, предоставляющим соответствующий Сервис в иных юрисдикциях. 
+                           С информацией о том, какое лицо предоставляет тот или иной Сервис, Вы можете ознакомиться в условиях использования 
+                           соответствующего Сервиса.
+                       </p> 
+                   </section>
+               </div>
+           </div> 
+       </div>
+
+        <script src="scripts/formScript.js" async defer></script>
+        <script src="scripts/popupScript.js" async defer></script>
+    </body>
+
+</html>
